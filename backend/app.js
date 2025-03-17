@@ -3,6 +3,7 @@ import "./database.js"
 import clientesRoutes from "./src/routes/client.js";
 import empleadosRoutes from "./src/routes/employee.js";
 import sucursalesRoutes from "./src/routes/branch.js";
+import reviewsRoutes from "./src/routes/reviews.js"
 
 const app = express();
 
@@ -14,5 +15,6 @@ app.use(express.json());
 app.use("/api/clientes", clientesRoutes);
 app.use("/api/empleados", empleadosRoutes);
 app.use("/api/sucursales", sucursalesRoutes);
+app.use("/api/reviews", reviewsRoutes);
 
 export default app;

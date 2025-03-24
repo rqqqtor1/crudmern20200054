@@ -10,16 +10,6 @@ const getEmpleados = async (req, res) => {
   }
 };
 
-const insertEmpleado = async (req, res) => {
-  try {
-    const empleado = new Employee(req.body);
-    await empleado.save();
-    res.status(201).json(empleado);
-  } catch (err) {
-    res.status(400).json({ error: err.message });
-  }
-};
-
 const updateEmpleado = async (req, res) => {
   try {
     const empleado = await Employee.findByIdAndUpdate(req.params.id, req.body, {
@@ -49,7 +39,6 @@ const deleteEmpleado = async (req, res) => {
 // Exportación por defecto
 export default {
   getEmpleados,
-  insertEmpleado,
   updateEmpleado,
   deleteEmpleado,
 };

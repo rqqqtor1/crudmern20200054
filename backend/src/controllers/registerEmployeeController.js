@@ -20,7 +20,7 @@ registerEmployeeController.register = async (req, res) =>{
             birthday,
             email,
             address,
-            pasword:passwordHash,
+            password:passwordHash,
             hireDate,
             telephone, 
             dui,

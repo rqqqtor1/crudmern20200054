@@ -1,5 +1,5 @@
 import mongoose from "mongoose"
-const URI = "mongodb://127.0.0.1:27017/dolarsiti"
+const URI = "mongodb+srv://jferorantes:Ziccoproxd1@fer.yxjrlpk.mongodb.net/Cinepolis?retryWrites=true&w=majority&appName=FER"
 
 mongoose.connect(URI) 
 

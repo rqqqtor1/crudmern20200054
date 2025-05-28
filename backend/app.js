@@ -8,8 +8,17 @@ import registerEmployeeRoutes from "./src/routes/registerEmployee.js";
 import loginRoutes from "./src/routes/login.js";
 import logoutRoute from "./src/routes/logout.js";
 import cookieParser from "cookie-parser";
+import cors from "cors"
 import registerclientRoute from "./src/routes/registerClient.js"
 const app = express();
+
+app.use(
+  cors({
+    origin: "http://localhost:5173",
+    // Permitir envío de cookies y credenciales
+    credentials: true
+  })
+);
 
 // Middleware para parsear JSON
 app.use(express.json());
